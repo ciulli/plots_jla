@@ -112,32 +112,10 @@ class dico_multi_SN:
 
 
 if __name__=="__main__":
-    print '---------'
- #   list_file='lc-05D3hh.list'#lc-SDSS15467.list'
-
- #   CL=read_list(list_file, SkipRows=26, delimiteur='  ') #trouver un moyen de trouver le nbre de lignes a sauter automatiquement
- #   dict_sn = create_dico_for_one_sn(CL)
-
-
-   # plt.scatter(dict_sn['MEGACAMPSF::r']['Date'], dict_sn['MEGACAMPSF::r']['Flux'])
-  
-
- #   plt.errorbar(dict_sn['MEGACAMPSF::g']['Date'], dict_sn['MEGACAMPSF::g']['Flux'], xerr=None, yerr=dict_sn['MEGACAMPSF::g']['Fluxerr'],linestyle='',alpha=0.75, marker='o', color='g', label='g')
-
- #   plt.errorbar(dict_sn['MEGACAMPSF::r']['Date'], dict_sn['MEGACAMPSF::r']['Flux'], xerr=None, yerr=dict_sn['MEGACAMPSF::r']['Fluxerr'],linestyle='',alpha=0.75, marker='o', color='r', label="r")
-
- #   plt.errorbar(dict_sn['MEGACAMPSF::i']['Date'], dict_sn['MEGACAMPSF::i']['Flux'], xerr=None, yerr=dict_sn['MEGACAMPSF::i']['Fluxerr'],linestyle='',alpha=0.75, marker='o', color='k', label='i')
-
- #   plt.errorbar(dict_sn['MEGACAMPSF::z']['Date'], dict_sn['MEGACAMPSF::z']['Flux'], xerr=None, yerr=dict_sn['MEGACAMPSF::z']['Fluxerr'],linestyle='',alpha=0.75, marker='o', color='b', label='z')
- #   plt.legend()
- #   plt.title('Courbe de lumiere lc-05D3hh')
- #   plt.xlabel('Date')
- #   plt.ylabel('Flux')
-
 
     AA=dico_multi_SN()
     AA.addSNetoDic()
-
+    # plot d'un SN
     snls_sn='lc-05D3hh.list'
     print AA.dic[snls_sn].keys()
     plot_snls_light_curve(AA.dic, snls_sn, couleurs=['r','g','i'])
